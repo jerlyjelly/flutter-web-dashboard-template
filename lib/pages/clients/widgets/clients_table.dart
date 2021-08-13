@@ -27,46 +27,34 @@ class Clientstable extends StatelessWidget {
               size: ColumnSize.L,
             ),
             DataColumn(
-              label: Text('Location'),
+              label: Text('Assignment Completion'),
             ),
             DataColumn(
-              label: Text('Rating'),
+              label: Text('Health Check Rating'),
             ),
             DataColumn(
-              label: Text('Action'),
+              label: Text(''),
             ),
           ],
           rows: List<DataRow>.generate(
               15,
               (index) => DataRow(cells: [
-                    DataCell(CustomText(text: "Santos Enoque")),
-                    DataCell(CustomText(text: "New yourk city")),
-                    DataCell(Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Icon(
-                          Icons.star,
-                          color: Colors.deepOrange,
-                          size: 18,
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        CustomText(
-                          text: "4.5",
-                        )
-                      ],
-                    )),
+                    DataCell(CustomText(text: "William Lee")),
+                    DataCell(CustomText(text: "80%")),
+                    DataCell(CustomText(text: "4.5")),
                     DataCell(Container(
                         decoration: BoxDecoration(
                           color: light,
                           borderRadius: BorderRadius.circular(20),
-                          border: Border.all(color: active, width: .5),
+                          border: Border.all(color: Colors.red, width: .5),
                         ),
-                        padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 6,
+                        ),
                         child: CustomText(
-                          text: "Block",
-                          color: active.withOpacity(.7),
+                          text: "Remove",
+                          color: Colors.red.withOpacity(0.7),
                           weight: FontWeight.bold,
                         ))),
                   ]))),
