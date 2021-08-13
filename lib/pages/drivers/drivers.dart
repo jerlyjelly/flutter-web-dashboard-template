@@ -10,27 +10,34 @@ class DriversPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          Obx(
-            () => Row(
-              children: [
-                Container(
-                    margin: EdgeInsets.only(top: ResponsiveWidget.isSmallScreen(context) ? 56 : 6),
-                    child: CustomText(
-                      text: menuController.activeItem.value,
-                      size: 24,
-                      weight: FontWeight.bold,
-                    )),
-              ],
+    return Scaffold(
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {},
+        label: Text('Assign'),
+        icon: Icon(Icons.add),
+      ),
+      body: Container(
+        child: Column(
+          children: [
+            Obx(
+              () => Row(
+                children: [
+                  Container(
+                      margin: EdgeInsets.only(top: ResponsiveWidget.isSmallScreen(context) ? 56 : 6),
+                      child: CustomText(
+                        text: menuController.activeItem.value,
+                        size: 24,
+                        weight: FontWeight.bold,
+                      )),
+                ],
+              ),
             ),
-          ),
-          Expanded(
-              child: ListView(
-            children: [DriversTable()],
-          )),
-        ],
+            Expanded(
+                child: ListView(
+              children: [DriversTable()],
+            )),
+          ],
+        ),
       ),
     );
   }
