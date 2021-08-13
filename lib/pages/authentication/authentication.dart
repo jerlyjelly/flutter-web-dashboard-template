@@ -4,6 +4,7 @@ import 'package:flutter_web_dashboard/routing/routes.dart';
 import 'package:flutter_web_dashboard/widgets/custom_text.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class AuthenticationPage extends StatelessWidget {
   const AuthenticationPage({Key key}) : super(key: key);
@@ -18,12 +19,9 @@ class AuthenticationPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(right: 12),
-                    child: Image.asset("assets/icons/logo.png"),
-                  ),
-                  Expanded(child: Container()),
+                  SvgPicture.asset('icons/myron.svg'),
                 ],
               ),
               SizedBox(
