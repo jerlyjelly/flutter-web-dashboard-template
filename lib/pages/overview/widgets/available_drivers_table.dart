@@ -42,36 +42,21 @@ class AvailableDriversTable extends StatelessWidget {
                   size: ColumnSize.L,
                 ),
                 DataColumn(
-                  label: Text('Location'),
+                  label: Text('Team'),
                 ),
                 DataColumn(
-                  label: Text('Rating'),
+                  label: Text('Completion'),
                 ),
                 DataColumn(
-                  label: Text('Action'),
+                  label: Text('Due'),
                 ),
               ],
               rows: List<DataRow>.generate(
                   7,
                   (index) => DataRow(cells: [
-                        DataCell(CustomText(text: "Santos Enoque")),
-                        DataCell(CustomText(text: "New yourk city")),
-                        DataCell(Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(
-                              Icons.star,
-                              color: Colors.deepOrange,
-                              size: 18,
-                            ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            CustomText(
-                              text: "4.5",
-                            )
-                          ],
-                        )),
+                        DataCell(CustomText(text: "\$assignment name")),
+                        DataCell(CustomText(text: "\$team name")),
+                        DataCell(CustomText(text: "\$avg completion %")),
                         DataCell(Container(
                             decoration: BoxDecoration(
                               color: light,
@@ -80,7 +65,7 @@ class AvailableDriversTable extends StatelessWidget {
                             ),
                             padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                             child: CustomText(
-                              text: "Assign Delivery",
+                              text: "D-3",
                               color: active.withOpacity(.7),
                               weight: FontWeight.bold,
                             ))),
