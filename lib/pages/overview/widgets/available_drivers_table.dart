@@ -26,7 +26,7 @@ class AvailableDriversTable extends StatelessWidget {
                 width: 10,
               ),
               CustomText(
-                text: "Available Drivers",
+                text: "Current Assignments",
                 color: lightGrey,
                 weight: FontWeight.bold,
               ),
