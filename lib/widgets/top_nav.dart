@@ -5,30 +5,22 @@ import 'package:flutter_web_dashboard/helpers/reponsiveness.dart';
 import 'custom_text.dart';
 
 AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) => AppBar(
-      leading: !ResponsiveWidget.isSmallScreen(context)
-          ? Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 16),
-                  child: Image.asset(
-                    "assets/icons/logo.png",
-                    width: 28,
-                  ),
-                ),
-              ],
-            )
-          : IconButton(
-              icon: Icon(Icons.menu),
-              onPressed: () {
-                key.currentState.openDrawer();
-              }),
+      leading: Visibility(
+        visible: ResponsiveWidget.isSmallScreen(context),
+        child: IconButton(
+          icon: Icon(Icons.menu),
+          onPressed: () {
+            key.currentState.openDrawer();
+          },
+        ),
+      ),
       title: Container(
         child: Row(
           children: [
             Visibility(
                 visible: !ResponsiveWidget.isSmallScreen(context),
                 child: CustomText(
-                  text: "Dash",
+                  text: "Myron",
                   color: lightGrey,
                   size: 20,
                   weight: FontWeight.bold,
