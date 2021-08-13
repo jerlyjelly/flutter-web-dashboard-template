@@ -72,7 +72,7 @@ class AuthenticationPage extends StatelessWidget {
                     children: [
                       Checkbox(value: true, onChanged: (value) {}),
                       CustomText(
-                        text: "Remeber Me",
+                        text: "Remember Me",
                       ),
                     ],
                   ),
