@@ -34,45 +34,47 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) => A
                   weight: FontWeight.bold,
                 )),
             Expanded(child: Container()),
-            IconButton(
-                icon: Icon(
-                  Icons.settings,
-                  color: dark,
-                ),
-                onPressed: () {}),
-            Stack(
-              children: [
-                IconButton(
-                    icon: Icon(
-                      Icons.notifications,
-                      color: dark.withOpacity(.7),
-                    ),
-                    onPressed: () {}),
-                Positioned(
-                  top: 7,
-                  right: 7,
-                  child: Container(
-                    width: 12,
-                    height: 12,
-                    padding: EdgeInsets.all(4),
-                    decoration: BoxDecoration(
-                        color: active,
-                        borderRadius: BorderRadius.circular(30),
-                        border: Border.all(color: light, width: 2)),
-                  ),
-                )
-              ],
-            ),
-            Container(
-              width: 1,
-              height: 22,
-              color: lightGrey,
-            ),
+            //!no settings or notifications for now
+            // IconButton(
+            //     icon: Icon(
+            //       Icons.settings,
+            //       color: dark,
+            //     ),
+            //     onPressed: () {}),
+            // Stack(
+            //   children: [
+            //     IconButton(
+            //         icon: Icon(
+            //           Icons.notifications,
+            //           color: dark.withOpacity(.7),
+            //         ),
+            //         onPressed: () {}),
+            //     Positioned(
+            //       top: 7,
+            //       right: 7,
+            //       child: Container(
+            //         width: 12,
+            //         height: 12,
+            //         padding: EdgeInsets.all(4),
+            //         decoration: BoxDecoration(
+            //             color: active,
+            //             borderRadius: BorderRadius.circular(30),
+            //             border: Border.all(color: light, width: 2)),
+            //       ),
+            //     )
+            //   ],
+            // ),
+            // Container(
+            //   width: 1,
+            //   height: 22,
+            //   color: lightGrey,
+            // ),
+            //!end
             SizedBox(
               width: 24,
             ),
             CustomText(
-              text: "Santos Enoque",
+              text: "\$name",
               color: lightGrey,
             ),
             SizedBox(
