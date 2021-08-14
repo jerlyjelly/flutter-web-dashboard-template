@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_dashboard/constants/controllers.dart';
 import 'package:flutter_web_dashboard/helpers/reponsiveness.dart';
+import 'package:flutter_web_dashboard/pages/404/error.dart';
+import 'package:flutter_web_dashboard/pages/drivers/assign.dart';
 import 'package:flutter_web_dashboard/pages/drivers/widgets/drivers_table.dart';
 import 'package:flutter_web_dashboard/widgets/custom_text.dart';
 import 'package:get/get.dart';
@@ -12,7 +14,14 @@ class DriversPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => AssignPage(),
+            ),
+          );
+        },
         label: Text('Assign'),
         icon: Icon(Icons.add),
       ),
