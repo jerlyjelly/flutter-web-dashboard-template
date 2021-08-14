@@ -54,7 +54,7 @@ class _ClientsPageState extends State<ClientsPage> {
                               ),
                               DropdownButton(
                                 hint: _dropDownValue == null
-                                    ? CustomText(text: 'Team 1')
+                                    ? CustomText(text: 'Choose Team')
                                     : CustomText(
                                         text: _dropDownValue,
                                         size: 30,
@@ -204,7 +204,7 @@ class _ClientsPageState extends State<ClientsPage> {
                 children: [
                   DropdownButton(
                     hint: _dropDownValue == null
-                        ? CustomText(text: 'Team 1')
+                        ? CustomText(text: 'Choose Team')
                         : CustomText(
                             text: _dropDownValue,
                             size: 30,
