@@ -76,7 +76,61 @@ class _ClientsPageState extends State<ClientsPage> {
                   ),
                   ElevatedButton.icon(
                     onPressed: () {
-                      // Respond to button press
+                      showDialog(
+                        context: context,
+                        builder: (_) => Center(
+                          // Aligns the container to center
+                          child: Container(
+                            // A simplified version of dialog.
+                            width: MediaQuery.of(context).size.width * 0.4,
+                            height: MediaQuery.of(context).size.height * 0.4,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(200),
+                              ),
+                              color: Colors.orange,
+                            ),
+                            child: Material(
+                              child: Padding(
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    CustomText(
+                                      text: 'Add New Team',
+                                      size: 24,
+                                      weight: FontWeight.bold,
+                                    ),
+                                    TextField(
+                                      decoration: InputDecoration(
+                                        labelText: "Team Name",
+                                        hintText: "Team 1",
+                                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+                                      ),
+                                    ),
+                                    InkWell(
+                                      onTap: () {
+                                        print('on tap tapped');
+                                      },
+                                      child: Container(
+                                        decoration:
+                                            BoxDecoration(color: active, borderRadius: BorderRadius.circular(20)),
+                                        alignment: Alignment.center,
+                                        width: double.maxFinite,
+                                        padding: EdgeInsets.symmetric(vertical: 16),
+                                        child: CustomText(
+                                          text: "Add",
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       primary: active,
